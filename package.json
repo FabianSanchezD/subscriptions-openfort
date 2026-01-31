@@ -1,23 +1,24 @@
 {
   "name": "subscriptions-openfort",
-  "version": "1.0.0",
-  "description": "Subscriptions with session keys on Openfort",
-  "homepage": "https://github.com/FabianSanchezD/subscriptions-openfort#readme",
-  "bugs": {
-    "url": "https://github.com/FabianSanchezD/subscriptions-openfort/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FabianSanchezD/subscriptions-openfort.git"
-  },
-  "license": "ISC",
-  "author": "Fabian Sanchez",
-  "type": "commonjs",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "turbo": "^2.8.1"
-  }
+    "prettier": "^3.7.4",
+    "turbo": "^2.8.1",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.6.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
